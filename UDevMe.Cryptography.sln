@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.Api", "Cryptography.Api\Cryptography.Api.csproj", "{B77A2C44-D657-4C03-A92A-B2FF45A22471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.BusinessLogic", "Cryptography.BusinessLogic\Cryptography.BusinessLogic.csproj", "{10E75735-7659-4727-BA0B-ECDE439D3A94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.Domain", "Cryptography.Domain\Cryptography.Domain.csproj", "{BD9330BF-2B7D-4BC1-8D8C-E30DD2B4BA1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cryptography.Tests", "Cryptography.Tests\Cryptography.Tests.csproj", "{B23B2AEA-325B-4354-99D1-3BB417F860B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B77A2C44-D657-4C03-A92A-B2FF45A22471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77A2C44-D657-4C03-A92A-B2FF45A22471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77A2C44-D657-4C03-A92A-B2FF45A22471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77A2C44-D657-4C03-A92A-B2FF45A22471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E75735-7659-4727-BA0B-ECDE439D3A94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E75735-7659-4727-BA0B-ECDE439D3A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E75735-7659-4727-BA0B-ECDE439D3A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E75735-7659-4727-BA0B-ECDE439D3A94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD9330BF-2B7D-4BC1-8D8C-E30DD2B4BA1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD9330BF-2B7D-4BC1-8D8C-E30DD2B4BA1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD9330BF-2B7D-4BC1-8D8C-E30DD2B4BA1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD9330BF-2B7D-4BC1-8D8C-E30DD2B4BA1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B23B2AEA-325B-4354-99D1-3BB417F860B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B23B2AEA-325B-4354-99D1-3BB417F860B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B23B2AEA-325B-4354-99D1-3BB417F860B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B23B2AEA-325B-4354-99D1-3BB417F860B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E059A7D-68AB-43A9-B80E-39B3B51A4FB7}
+	EndGlobalSection
+EndGlobal
