@@ -1,3 +1,5 @@
+using Cryptography.BusinessLogic.Services;
+using Cryptography.Domain.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,7 @@ namespace Cryptography.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IRsaService, RsaService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

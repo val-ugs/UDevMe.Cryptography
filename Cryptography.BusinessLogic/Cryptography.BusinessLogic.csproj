@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\Cryptography.Domain\Cryptography.Domain.csproj" />
   </ItemGroup>
 
 </Project>
