@@ -31,6 +31,7 @@ namespace Cryptography.Api
             services.AddTransient<ICaesarCipherService, CaesarCipherService>();
             services.AddTransient<IVigenereCipherService, VigenereCipherService>();
             services.AddTransient<IRsaService, RsaService>();
+            services.AddTransient<IElGamalService, ElGamalService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

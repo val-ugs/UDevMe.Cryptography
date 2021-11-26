@@ -61,7 +61,7 @@ namespace Cryptography.BusinessLogic.Services
             if (!CheckCoPrime(rsaData.Exponent, n))
                 throw new Exception("e and n is not co-prime");
 
-            y = (int)Math.Pow(rsaData.Value, rsaData.Exponent) % m;
+            y = (int)(Math.Pow(rsaData.Value, rsaData.Exponent) % m);
 
             return y;
         }
@@ -75,7 +75,7 @@ namespace Cryptography.BusinessLogic.Services
             m = rsaData.P * rsaData.Q;
             n = (rsaData.P - 1) * (rsaData.Q - 1);
 
-            x = (int)Math.Pow(rsaData.Value, rsaData.Exponent) % m;
+            x = (int)(Math.Pow(rsaData.Value, rsaData.Exponent) % m);
 
             return x;
         }

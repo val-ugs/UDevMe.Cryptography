@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace Cryptography.Tests
 {
-    class CaesarCipherTests
+    class CaesarCipherServiceTests
     {
         private CaesarCipherService _service;
 

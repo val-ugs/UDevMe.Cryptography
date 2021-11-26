@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Cryptography.Tests
 {
-    class VigenereCipherTests
+    class VigenereCipherServiceTests
     {
         private VigenereCipherService _service;
 
