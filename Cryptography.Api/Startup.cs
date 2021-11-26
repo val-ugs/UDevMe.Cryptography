@@ -32,6 +32,7 @@ namespace Cryptography.Api
             services.AddTransient<IVigenereCipherService, VigenereCipherService>();
             services.AddTransient<IRsaService, RsaService>();
             services.AddTransient<IElGamalService, ElGamalService>();
+            services.AddTransient<IA5Service, A5Service>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
