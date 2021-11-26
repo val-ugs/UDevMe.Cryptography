@@ -17,6 +17,7 @@ namespace Cryptography.Tests
         [Test]
         public void Encrypt__ShouldReturnTrue()
         {
+            // arrange
             int p = 13;
             int q = 7;
             int e = 5;
@@ -32,14 +33,17 @@ namespace Cryptography.Tests
                 Value = x
             };
 
+            // act
             var result = _service.Encrypt(rsaData);
 
+            // assert
             Assert.AreEqual(expectedResult, result);
         }
 
         [Test]
         public void Decrypt__ShouldReturnTrue()
         {
+            // arrange
             int p = 13;
             int q = 7;
             int e = 5;
@@ -55,8 +59,10 @@ namespace Cryptography.Tests
                 Value = x
             };
 
+            // act
             var result = _service.Decrypt(rsaData);
 
+            // assert
             Assert.AreEqual(expectedResult, result);
         }
     }

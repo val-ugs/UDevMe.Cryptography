@@ -56,10 +56,10 @@ namespace Cryptography.BusinessLogic.Services
             n = (rsaData.P - 1) * (rsaData.Q - 1);
 
             if (rsaData.Exponent <= 1 && rsaData.Exponent >= n)
-                throw new Exception("Не допустимое e. Должно быть в пределах 1 < e < n");
+                throw new Exception("1 < e < n not performed");
 
             if (!CheckCoPrime(rsaData.Exponent, n))
-                throw new Exception("e и n не взаимо простые");
+                throw new Exception("e and n is not co-prime");
 
             y = (int)Math.Pow(rsaData.Value, rsaData.Exponent) % m;
 
@@ -83,9 +83,9 @@ namespace Cryptography.BusinessLogic.Services
         void CheckPQ(int p, int q)
         {
             if (!CheckPrimeNumber(p))
-                throw new Exception("p - не простое");
+                throw new Exception("p is not prime");
             if (!CheckPrimeNumber(q))
-                throw new Exception("q - не простое");
+                throw new Exception("q is not prime");
         }
     }
 }
