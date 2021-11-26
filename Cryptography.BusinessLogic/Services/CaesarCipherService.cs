@@ -32,7 +32,7 @@ namespace Cryptography.BusinessLogic.Services
             switch (caesarCipherData.Language.ToUpper())
             {
                 case "RU":
-                    alphabet = "АБВГДЕЖХИЙКЛМНОПРСТУФХЦЧШЩЪЬЭЮЯ";
+                    alphabet = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
                     break;
                 case "EN":
                     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -57,6 +57,7 @@ namespace Cryptography.BusinessLogic.Services
                         if (text[i] == alphabet[j])
                         {
                             newText += alphabet[(operation(j, shift) + alphabet.Length) % alphabet.Length];
+                            break;
                         }
                     }
                 }

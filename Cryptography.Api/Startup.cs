@@ -29,6 +29,7 @@ namespace Cryptography.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<ICaesarCipherService, CaesarCipherService>();
+            services.AddTransient<IVigenereCipherService, VigenereCipherService>();
             services.AddTransient<IRsaService, RsaService>();
 
             services.AddControllers();
