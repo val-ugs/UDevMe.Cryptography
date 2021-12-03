@@ -8,14 +8,24 @@
              d:DesignHeight="510" d:DesignWidth="600">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <Grid Grid.Row="0">
+            <TextBlock  HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
+        </Grid>
+
+        <GridSplitter Grid.Row="1" ShowsPreview="False" Height="1"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <TextBlock  HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
                 <WrapPanel>
                     <Label>Select Language</Label>
                     <ComboBox x:Name="language1">
@@ -31,14 +41,20 @@
                 <Label>Output:</Label>
                 <ListBox Height="130" x:Name="outputList1" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
             </StackPanel>
-        </Grid>
+        </ScrollViewer>
         
-        <GridSplitter Grid.Row="1" ShowsPreview="False" Height="3"
+        <GridSplitter Grid.Row="3" ShowsPreview="False" Height="3"
                 VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
-        
-        <Grid Grid.Row="2">
+
+        <Grid Grid.Row="4">
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Decrypt</TextBlock>
+        </Grid>
+
+        <GridSplitter Grid.Row="5" ShowsPreview="False" Height="1"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <ScrollViewer Grid.Row="6" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Decrypt</TextBlock>
                 <WrapPanel>
                     <Label>Select Language</Label>
                     <ComboBox x:Name="language2">
@@ -54,6 +70,6 @@
                 <Label>Output:</Label>
                 <ListBox Height="130" x:Name="outputList2" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
             </StackPanel>
-        </Grid>
+        </ScrollViewer>
     </Grid>
 </UserControl>
