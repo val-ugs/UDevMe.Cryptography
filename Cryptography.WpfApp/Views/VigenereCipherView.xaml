@@ -7,41 +7,61 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
             <StackPanel>
+                <TextBlock  HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
                 <WrapPanel>
                     <Label>Select Language</Label>
-                    <ComboBox>
+                    <ComboBox x:Name="language1">
                         <ComboBoxItem IsSelected="true">RU</ComboBoxItem>
                         <ComboBoxItem>EN</ComboBoxItem>
                     </ComboBox>
                 </WrapPanel>
                 <WrapPanel>
                     <Label>Input Text:</Label>
-                    <TextBox Width="200"></TextBox>
+                    <TextBox x:Name="inputText1" Width="200" VerticalAlignment="Center"></TextBox>
                 </WrapPanel>
-                <Button Width="200" HorizontalAlignment="Left" Margin="5">Encrypt</Button>
+                <WrapPanel>
+                    <Label>Key:</Label>
+                    <TextBox x:Name="inputKey1" Width="200" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <Button Click="btnEncrypt_Click" Width="200" HorizontalAlignment="Left" Margin="5">Encrypt</Button>
                 <Label>Output:</Label>
-                <ListBox>
-                </ListBox>
+                <TextBox x:Name="outputText1" IsReadOnly="True" Width="200" HorizontalAlignment="Left" Margin="5"></TextBox>
             </StackPanel>
+        </Grid>
+
+        <GridSplitter Grid.Row="1" ShowsPreview="False" Height="3"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <Grid Grid.Row="2">
             <StackPanel>
+                <TextBlock  HorizontalAlignment="Center" FontWeight="Bold">Decrypt</TextBlock>
                 <WrapPanel>
                     <Label>Select Language</Label>
-                    <ComboBox>
+                    <ComboBox x:Name="language2">
                         <ComboBoxItem IsSelected="true">RU</ComboBoxItem>
                         <ComboBoxItem>EN</ComboBoxItem>
                     </ComboBox>
                 </WrapPanel>
                 <WrapPanel>
                     <Label>Input Text:</Label>
-                    <TextBox Width="200"></TextBox>
+                    <TextBox x:Name="inputText2" Width="200" VerticalAlignment="Center"></TextBox>
                 </WrapPanel>
-                <Button Width="200" HorizontalAlignment="Left" Margin="5">Encrypt</Button>
+                <WrapPanel>
+                    <Label>Key:</Label>
+                    <TextBox x:Name="inputKey2" Width="200" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <Button Click="btnDecrypt_Click" Width="200" HorizontalAlignment="Left" Margin="5">Decrypt</Button>
                 <Label>Output:</Label>
-                <ListBox>
-                </ListBox>
+                <TextBox x:Name="outputText2" IsReadOnly="True" Width="200" HorizontalAlignment="Left" Margin="5"></TextBox>
             </StackPanel>
-        </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>
