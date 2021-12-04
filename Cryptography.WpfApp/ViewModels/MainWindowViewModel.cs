@@ -40,7 +40,8 @@ namespace Cryptography.WpfApp.ViewModels
                 new Algorithm(){ Name = "Caesar Cipher", UserControlSample = new CaesarCipherView() },
                 new Algorithm(){ Name = "Vigenere Cipher", UserControlSample = new VigenereCipherView() },
                 new Algorithm(){ Name = "El Gamal", UserControlSample = new ElGamalView() },
-                new Algorithm(){ Name = "RSA", UserControlSample = new RsaView() }
+                new Algorithm(){ Name = "RSA", UserControlSample = new RsaView() },
+                new Algorithm(){ Name = "A5", UserControlSample = new A5View() }
             };
 
             SelectedAlgorithm = Algorithms.FirstOrDefault();
