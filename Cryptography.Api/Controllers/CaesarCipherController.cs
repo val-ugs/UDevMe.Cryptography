@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CaesarCipherController
+    public class CaesarCipherController : ControllerBase
     {
         private readonly ICaesarCipherService _caesarCipherService;
 

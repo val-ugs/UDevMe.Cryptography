@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ElGamalController
+    public class ElGamalController : ControllerBase
     {
         private readonly IElGamalService _elGamalService;
 

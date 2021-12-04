@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VigenereCipherController
+    public class VigenereCipherController : ControllerBase
     {
         private readonly IVigenereCipherService _viginereCipherService;
 
