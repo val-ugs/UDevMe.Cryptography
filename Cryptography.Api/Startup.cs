@@ -28,12 +28,12 @@ namespace Cryptography.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<ICaesarCipherService, CaesarCipherService>();
-            services.AddTransient<IVigenereCipherService, VigenereCipherService>();
-            services.AddTransient<IRsaService, RsaService>();
-            services.AddTransient<IElGamalService, ElGamalService>();
             services.AddTransient<IA5Service, A5Service>();
+            services.AddTransient<ICaesarCipherService, CaesarCipherService>();
+            services.AddTransient<IDiffieHellmanService, DiffieHellmanService>();
             services.AddTransient<IMd5Service, Md5Service>();
+            services.AddTransient<IRsaService, RsaService>();
+            services.AddTransient<IVigenereCipherService, VigenereCipherService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
