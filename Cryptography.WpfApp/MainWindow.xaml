@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cryptography.WpfApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800"
+        Title="Cryptographic algorithms" Height="600" Width="800"
         MinHeight="600" MinWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -16,15 +16,42 @@
         
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <Grid Grid.Row="0" HorizontalAlignment="Center">
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0">
+                    <Image.Source>
+                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/UDevMeLogo.png"/>
+                    </Image.Source>
+                </Image>
+
+                <GridSplitter Grid.Row="1" ShowsPreview="False" Height="1"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" FontSize="11">Created by Valentin Charugin</TextBlock>
+            </Grid>
+
+            <GridSplitter Grid.Row="1" ShowsPreview="False" Height="3"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+            <Grid Grid.Row="2" HorizontalAlignment="Center">
                 <TextBlock FontWeight="Bold" TextDecorations="Underline" Text="Algorithms"/>
             </Grid>
-            
-            <Grid Grid.Row="1">
+
+            <GridSplitter Grid.Row="3" ShowsPreview="False" Height="3"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+            <Grid Grid.Row="4">
                 <ListBox ItemsSource="{Binding Algorithms}" SelectedItem="{Binding SelectedAlgorithm}" BorderThickness="0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -32,13 +59,6 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <!--<ListBox Name="algorithmsList" SelectedItem="{Binding SelectedAlgorithm}" BorderThickness="0">
-                    <ListBoxItem>Caesar Cipher</ListBoxItem>
-                    <ListBoxItem>Vigenere Cipher</ListBoxItem>
-                    <ListBoxItem>Rsa</ListBoxItem>
-                    <ListBoxItem>El Gamal</ListBoxItem>
-                    <ListBoxItem>A5</ListBoxItem>
-                </ListBox>-->
             </Grid>
         </Grid>
 

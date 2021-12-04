@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <TextBlock  HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
         </Grid>
 
         <GridSplitter Grid.Row="1" ShowsPreview="False" Height="1"
@@ -26,7 +26,7 @@
 
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <TextBlock Foreground="Red">Attention: Enter all bits separated by commas</TextBlock>
+                <TextBlock Foreground="Red" Margin="5">Attention: Enter all bits separated by commas</TextBlock>
                 <WrapPanel>
                     <Label>Register A:</Label>
                     <TextBox x:Name="registerA1" Width="400" VerticalAlignment="Center"></TextBox>
@@ -76,7 +76,7 @@
 
         <ScrollViewer Grid.Row="6" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <TextBlock Foreground="Red">Attention: Enter all bits separated by commas</TextBlock>
+                <TextBlock Foreground="Red" Margin="5">Attention: Enter all bits separated by commas</TextBlock>
                 <WrapPanel>
                     <Label>Register A:</Label>
                     <TextBox x:Name="registerA2" Width="400" VerticalAlignment="Center"></TextBox>
