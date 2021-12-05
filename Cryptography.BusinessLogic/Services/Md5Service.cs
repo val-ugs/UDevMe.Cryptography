@@ -111,12 +111,14 @@ namespace Cryptography.BusinessLogic.Services
 
         private uint LeftRotateS(uint temp, int s)
         {
-            return ((temp << s) | (temp >> (4 - s))) % _limitUInt;
+            s += 1;
+            return ((temp << (s % 4)) | (temp >> (((4 - s) + 4) % 4))) % _limitUInt;
         }
 
         private uint RightRotateS(uint temp, int s)
         {
-            return ((temp >> s) | (temp << (4 - s))) % _limitUInt;
+            s += 1;
+            return ((temp >> s % 4) | (temp << (((4 - s) + 4) % 4))) % _limitUInt;
         }
 
         private bool VerifyMd5Data(Md5Data md5Data)

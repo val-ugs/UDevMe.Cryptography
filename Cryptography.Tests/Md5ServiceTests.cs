@@ -31,10 +31,10 @@ namespace Cryptography.Tests
             uint k = 0b_0101;
             Md5Data expectedMd5Data = new Md5Data
             {
-                A = 0b_0011,
-                B = 0b_1001,
-                C = 0b_0001,
-                D = 0b_0001,
+                A = 0b_1001,
+                B = 0b_0101,
+                C = 0b_1011,
+                D = 0b_1100,
                 M = m,
                 K = k
             };
@@ -72,8 +72,8 @@ namespace Cryptography.Tests
             Md5Data expectedMd5Data = new Md5Data
             {
                 A = 0b_0110,
-                B = 0b_0001,
-                C = 0b_0011,
+                B = 0b_1100,
+                C = 0b_1001,
                 D = 0b_1010,
                 M = m,
                 K = k
@@ -104,10 +104,10 @@ namespace Cryptography.Tests
         public void Decrypt__ShouldReturnTrue()
         {
             // arrange
-            uint a = 0b_0011;
-            uint b = 0b_1001;
-            uint c = 0b_0001;
-            uint d = 0b_0001;
+            uint a = 0b_1001;
+            uint b = 0b_0101;
+            uint c = 0b_1011;
+            uint d = 0b_1100;
             uint m = 0b_1011;
             uint k = 0b_0101;
             Md5Data expectedMd5Data = new Md5Data
@@ -144,17 +144,17 @@ namespace Cryptography.Tests
         public void DecryptPerRound__ShouldReturnTrue()
         {
             // arrange
-            uint a = 0b_0011;
-            uint b = 0b_1001;
-            uint c = 0b_0001;
-            uint d = 0b_0001;
+            uint a = 0b_1001;
+            uint b = 0b_0101;
+            uint c = 0b_1011;
+            uint d = 0b_1100;
             uint m = 0b_1011;
             uint k = 0b_0101;
             Md5Data expectedMd5Data = new Md5Data
             {
                 A = 0b_0110,
-                B = 0b_0001,
-                C = 0b_0011,
+                B = 0b_1100,
+                C = 0b_1001,
                 D = 0b_1010,
                 M = m,
                 K = k
