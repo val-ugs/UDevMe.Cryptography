@@ -13,13 +13,11 @@ namespace Cryptography.BusinessLogic.Services
         public int GetPeriod(FibonacciLfsrData fibonacciLfsrData)
         {
             int period = 0;
-            List<int> outputValues = new List<int>();
             List<int> values = new List<int>(fibonacciLfsrData.Values);
             int feedbackValue;
 
             do
             {
-                outputValues.Add(fibonacciLfsrData.Values.LastOrDefault());
                 feedbackValue = Feedback(fibonacciLfsrData.Values, fibonacciLfsrData.Indices);
                 
                 for (int i = fibonacciLfsrData.Values.Count - 1; i > 0; i--)
