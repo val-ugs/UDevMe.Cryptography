@@ -31,6 +31,7 @@ namespace Cryptography.Api
             services.AddTransient<IA5Service, A5Service>();
             services.AddTransient<ICaesarCipherService, CaesarCipherService>();
             services.AddTransient<IDiffieHellmanService, DiffieHellmanService>();
+            services.AddTransient<IElGamalService, ElGamalService>();
             services.AddTransient<IFeistelService, FeistelService>();
             services.AddTransient<IFibonacciLfsrService, FibonacciLfsrService>();
             services.AddTransient<IGaloisLfsrService, GaloisLfsrService>();

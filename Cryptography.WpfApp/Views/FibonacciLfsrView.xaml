@@ -22,7 +22,7 @@
 
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <TextBlock Foreground="Red" Margin="5">Attention: Enter all bits separated by commas</TextBlock>
+                <TextBlock Foreground="Red" Margin="5">Attention: Enter all input separated by commas</TextBlock>
                 <WrapPanel>
                     <Label>Input Values:</Label>
                     <TextBox x:Name="inputValues" Width="400" VerticalAlignment="Center"></TextBox>

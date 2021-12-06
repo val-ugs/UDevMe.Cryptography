@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Cryptography.WpfApp.Models
 {
-    public class VigenereCipherData
+    public class GronsfeldCipherData
     {
         public string Language { get; set; }
         public string Text { get; set; }
-        public string Key { get; set; }
+        public List<int> Key { get; set; }
     }
 }

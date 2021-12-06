@@ -19,25 +19,27 @@ using System.Windows.Shapes;
 namespace Cryptography.WpfApp.Views
 {
     /// <summary>
-    /// Interaction logic for VigenereCipherView.xaml
+    /// Interaction logic for GronsfeldCipherView.xaml
     /// </summary>
-    public partial class VigenereCipherView : UserControl
+    public partial class GronsfeldCipherView : UserControl
     {
-        public VigenereCipherView()
+        private char _delimiter = ',';
+
+        public GronsfeldCipherView()
         {
             InitializeComponent();
         }
 
         private void btnEncrypt_Click(object sender, RoutedEventArgs e)
         {
-            var vigenereCipherData = new VigenereCipherData
+            var gronsfeldCipher = new GronsfeldCipherData
             {
                 Language = language1.Text,
                 Text = inputText1.Text,
-                Key = inputKey1.Text
+                Key = DataConverter.ConvertStringToIntList(inputKey1.Text, _delimiter)
             };
 
-            var response = HttpClientSample.Client.PostAsJsonAsync("VigenereCipher/Encrypt", vigenereCipherData).Result;
+            var response = HttpClientSample.Client.PostAsJsonAsync("GronsfeldCipher/Encrypt", gronsfeldCipher).Result;
 
             if (response.IsSuccessStatusCode)
             {
@@ -47,14 +49,14 @@ namespace Cryptography.WpfApp.Views
 
         private void btnDecrypt_Click(object sender, RoutedEventArgs e)
         {
-            var vigenereCipherData = new VigenereCipherData
+            var gronsfeldCipher = new GronsfeldCipherData
             {
                 Language = language2.Text,
                 Text = inputText2.Text,
-                Key = inputKey2.Text
+                Key = DataConverter.ConvertStringToIntList(inputKey1.Text, _delimiter)
             };
 
-            var response = HttpClientSample.Client.PostAsJsonAsync("VigenereCipher/Decrypt", vigenereCipherData).Result;
+            var response = HttpClientSample.Client.PostAsJsonAsync("GronsfeldCipher/Decrypt", gronsfeldCipher).Result;
 
             if (response.IsSuccessStatusCode)
             {

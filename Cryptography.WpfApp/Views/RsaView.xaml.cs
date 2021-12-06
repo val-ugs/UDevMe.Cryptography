@@ -1,4 +1,4 @@
-﻿using Cryptography.Domain.Models;
+﻿using Cryptography.WpfApp.Models;
 using Cryptography.WpfApp.Utils;
 using System;
 using System.Collections.Generic;

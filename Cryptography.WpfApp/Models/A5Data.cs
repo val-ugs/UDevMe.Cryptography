@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cryptography.Domain.Models
+namespace Cryptography.WpfApp.Models
 {
     public class A5Data
     {
