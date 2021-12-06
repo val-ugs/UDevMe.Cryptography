@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Cryptography.WpfApp.Views.FibonacciLfsrView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cryptography.WpfApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
+        </Grid>
+
+        <GridSplitter Grid.Row="1" ShowsPreview="False" Height="1"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Foreground="Red" Margin="5">Attention: Enter all bits separated by commas</TextBlock>
+                <WrapPanel>
+                    <Label>Input Values:</Label>
+                    <TextBox x:Name="inputValues" Width="400" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label>Input Indices Used For Addition:</Label>
+                    <TextBox x:Name="inputIndices" Width="400" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Button Click="btnGetPeriod_Click" Width="100" HorizontalAlignment="Left" Margin="5">Period</Button>
+                    <TextBox x:Name="outputPeriod" IsReadOnly="True" Width="400" HorizontalAlignment="Left" Margin="5"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Button Click="btnGenerateSequence_Click" Width="120" HorizontalAlignment="Left" Margin="5">Generate Sequence</Button>
+                    <TextBox x:Name="outputValues" IsReadOnly="True" Width="400" HorizontalAlignment="Left" Margin="5"></TextBox>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

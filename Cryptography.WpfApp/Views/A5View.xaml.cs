@@ -34,13 +34,13 @@ namespace Cryptography.WpfApp.Views
         {
             var a5Data = new A5Data
             {
-                RegisterA = ConvertStringToIntList(registerA1.Text, _delimiter),
-                RegisterB = ConvertStringToIntList(registerB1.Text, _delimiter),
-                RegisterC = ConvertStringToIntList(registerC1.Text, _delimiter),
-                IndicesA = ConvertStringToIntList(indicesA1.Text, _delimiter),
-                IndicesB = ConvertStringToIntList(indicesB1.Text, _delimiter),
-                IndicesC = ConvertStringToIntList(indicesC1.Text, _delimiter),
-                InputValues = ConvertStringToIntList(inputValues1.Text, _delimiter).ToArray()
+                RegisterA = DataConverter.ConvertStringToIntList(registerA1.Text, _delimiter),
+                RegisterB = DataConverter.ConvertStringToIntList(registerB1.Text, _delimiter),
+                RegisterC = DataConverter.ConvertStringToIntList(registerC1.Text, _delimiter),
+                IndicesA = DataConverter.ConvertStringToIntList(indicesA1.Text, _delimiter),
+                IndicesB = DataConverter.ConvertStringToIntList(indicesB1.Text, _delimiter),
+                IndicesC = DataConverter.ConvertStringToIntList(indicesC1.Text, _delimiter),
+                InputValues = DataConverter.ConvertStringToIntList(inputValues1.Text, _delimiter).ToArray()
             };
 
             var response = HttpClientSample.Client.PostAsJsonAsync("A5/GetKey", a5Data).Result;
@@ -48,7 +48,7 @@ namespace Cryptography.WpfApp.Views
             if (response.IsSuccessStatusCode)
             {
                 var key = response.Content.ReadAsAsync<int[]>().Result;
-                key1.Text = ConvertIntArrayToString(key, _delimiter);
+                key1.Text = DataConverter.ConvertIntArrayToString(key, _delimiter);
             }
         }
 
@@ -56,13 +56,13 @@ namespace Cryptography.WpfApp.Views
         {
             var a5Data = new A5Data
             {
-                RegisterA = ConvertStringToIntList(registerA2.Text, _delimiter),
-                RegisterB = ConvertStringToIntList(registerB2.Text, _delimiter),
-                RegisterC = ConvertStringToIntList(registerC2.Text, _delimiter),
-                IndicesA = ConvertStringToIntList(indicesA2.Text, _delimiter),
-                IndicesB = ConvertStringToIntList(indicesB2.Text, _delimiter),
-                IndicesC = ConvertStringToIntList(indicesC2.Text, _delimiter),
-                InputValues = ConvertStringToIntList(inputValues2.Text, _delimiter).ToArray()
+                RegisterA = DataConverter.ConvertStringToIntList(registerA2.Text, _delimiter),
+                RegisterB = DataConverter.ConvertStringToIntList(registerB2.Text, _delimiter),
+                RegisterC = DataConverter.ConvertStringToIntList(registerC2.Text, _delimiter),
+                IndicesA = DataConverter.ConvertStringToIntList(indicesA2.Text, _delimiter),
+                IndicesB = DataConverter.ConvertStringToIntList(indicesB2.Text, _delimiter),
+                IndicesC = DataConverter.ConvertStringToIntList(indicesC2.Text, _delimiter),
+                InputValues = DataConverter.ConvertStringToIntList(inputValues2.Text, _delimiter).ToArray()
             };
 
             var response = HttpClientSample.Client.PostAsJsonAsync("A5/GetKey", a5Data).Result;
@@ -70,7 +70,7 @@ namespace Cryptography.WpfApp.Views
             if (response.IsSuccessStatusCode)
             {
                 var key = response.Content.ReadAsAsync<int[]>().Result;
-                key2.Text = ConvertIntArrayToString(key, _delimiter);
+                key2.Text = DataConverter.ConvertIntArrayToString(key, _delimiter);
             }
         }
 
@@ -78,13 +78,13 @@ namespace Cryptography.WpfApp.Views
         {
             var a5Data = new A5Data
             {
-                RegisterA = ConvertStringToIntList(registerA1.Text, _delimiter),
-                RegisterB = ConvertStringToIntList(registerB1.Text, _delimiter),
-                RegisterC = ConvertStringToIntList(registerC1.Text, _delimiter),
-                IndicesA = ConvertStringToIntList(indicesA1.Text, _delimiter),
-                IndicesB = ConvertStringToIntList(indicesB1.Text, _delimiter),
-                IndicesC = ConvertStringToIntList(indicesC1.Text, _delimiter),
-                InputValues = ConvertStringToIntList(inputValues1.Text, _delimiter).ToArray()
+                RegisterA = DataConverter.ConvertStringToIntList(registerA1.Text, _delimiter),
+                RegisterB = DataConverter.ConvertStringToIntList(registerB1.Text, _delimiter),
+                RegisterC = DataConverter.ConvertStringToIntList(registerC1.Text, _delimiter),
+                IndicesA = DataConverter.ConvertStringToIntList(indicesA1.Text, _delimiter),
+                IndicesB = DataConverter.ConvertStringToIntList(indicesB1.Text, _delimiter),
+                IndicesC = DataConverter.ConvertStringToIntList(indicesC1.Text, _delimiter),
+                InputValues = DataConverter.ConvertStringToIntList(inputValues1.Text, _delimiter).ToArray()
             };
 
             var response = HttpClientSample.Client.PostAsJsonAsync("A5/Encrypt", a5Data).Result;
@@ -92,7 +92,7 @@ namespace Cryptography.WpfApp.Views
             if (response.IsSuccessStatusCode)
             {
                 var outputValues = response.Content.ReadAsAsync<int[]>().Result;
-                outputValues1.Text = ConvertIntArrayToString(outputValues, _delimiter);
+                outputValues1.Text = DataConverter.ConvertIntArrayToString(outputValues, _delimiter);
             }
         }
 
@@ -100,13 +100,13 @@ namespace Cryptography.WpfApp.Views
         {
             var a5Data = new A5Data
             {
-                RegisterA = ConvertStringToIntList(registerA2.Text, _delimiter),
-                RegisterB = ConvertStringToIntList(registerB2.Text, _delimiter),
-                RegisterC = ConvertStringToIntList(registerC2.Text, _delimiter),
-                IndicesA = ConvertStringToIntList(indicesA2.Text, _delimiter),
-                IndicesB = ConvertStringToIntList(indicesB2.Text, _delimiter),
-                IndicesC = ConvertStringToIntList(indicesC2.Text, _delimiter),
-                InputValues = ConvertStringToIntList(inputValues2.Text, _delimiter).ToArray()
+                RegisterA = DataConverter.ConvertStringToIntList(registerA2.Text, _delimiter),
+                RegisterB = DataConverter.ConvertStringToIntList(registerB2.Text, _delimiter),
+                RegisterC = DataConverter.ConvertStringToIntList(registerC2.Text, _delimiter),
+                IndicesA = DataConverter.ConvertStringToIntList(indicesA2.Text, _delimiter),
+                IndicesB = DataConverter.ConvertStringToIntList(indicesB2.Text, _delimiter),
+                IndicesC = DataConverter.ConvertStringToIntList(indicesC2.Text, _delimiter),
+                InputValues = DataConverter.ConvertStringToIntList(inputValues2.Text, _delimiter).ToArray()
             };
 
             var response = HttpClientSample.Client.PostAsJsonAsync("A5/Decrypt", a5Data).Result;
@@ -114,38 +114,8 @@ namespace Cryptography.WpfApp.Views
             if (response.IsSuccessStatusCode)
             {
                 var outputValues = response.Content.ReadAsAsync<int[]>().Result;
-                outputValues2.Text = ConvertIntArrayToString(outputValues, _delimiter);
+                outputValues2.Text = DataConverter.ConvertIntArrayToString(outputValues, _delimiter);
             }
-        }
-
-        private List<int> ConvertStringToIntList(string text, char delimiter)
-        {
-            List<int> numbers = new List<int>();
-            int value;
-            var textMembers = text.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
-
-            foreach(var textMember in textMembers)
-            {
-                numbers.Add(int.TryParse(textMember, out value) ? value : 0);
-            }
-
-            return numbers;
-        }
-
-        private string ConvertIntArrayToString(int[] outputValues, char delimiter)
-        {
-            StringBuilder outputString = new StringBuilder();
-
-            for (int i = 0; i < outputValues.Length; i++)
-            {
-                outputString.Append(outputValues[i]);
-                if (i != outputValues.Length - 1)
-                {
-                    outputString.Append(_delimiter + " ");
-                }
-            }
-
-            return outputString.ToString();
         }
     }
 }
