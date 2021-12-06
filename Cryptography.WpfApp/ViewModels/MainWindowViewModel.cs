@@ -43,6 +43,7 @@ namespace Cryptography.WpfApp.ViewModels
                 new Algorithm(){ Name = "Diffie Hellman", UserControlSample = new DiffieHellmanView() },
                 new Algorithm(){ Name = "Feistel", UserControlSample = new FeistelView() },
                 new Algorithm(){ Name = "Fibonacci Lfsr", UserControlSample = new FibonacciLfsrView() },
+                new Algorithm(){ Name = "Galois Lfsr", UserControlSample = new GaloisLfsrView() },
                 new Algorithm(){ Name = "MD5", UserControlSample = new Md5View() },
                 new Algorithm(){ Name = "Permutation", UserControlSample = new PermutationView() },
                 new Algorithm(){ Name = "RSA", UserControlSample = new RsaView() },
