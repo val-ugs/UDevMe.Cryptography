@@ -20,9 +20,25 @@ namespace Cryptography.Api.Controllers
         }
 
         [HttpPost("[action]")]
+        public ActionResult<FeistelData> Encrypt(FeistelData feistelData)
+        {
+            var result = _feistelService.Encrypt(feistelData);
+
+            return result;
+        }
+
+        [HttpPost("[action]")]
         public ActionResult<FeistelData> EncryptPerRound(FeistelData feistelData)
         {
             var result = _feistelService.EncryptPerRound(feistelData);
+
+            return result;
+        }
+
+        [HttpPost("[action]")]
+        public ActionResult<FeistelData> Decrypt(FeistelData feistelData)
+        {
+            var result = _feistelService.Decrypt(feistelData);
 
             return result;
         }

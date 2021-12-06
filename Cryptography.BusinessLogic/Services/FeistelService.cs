@@ -16,6 +16,12 @@ namespace Cryptography.BusinessLogic.Services
             R = 0
         };
 
+        public FeistelData Encrypt(FeistelData feistelData)
+        {
+            feistelData.Round = feistelData.K.Count;
+            return EncryptPerRound(feistelData);
+        }
+
         public FeistelData EncryptPerRound(FeistelData feistelData)
         {
             uint temp;
@@ -38,6 +44,12 @@ namespace Cryptography.BusinessLogic.Services
                 feistelData.L = temp;
             }
             return feistelData;
+        }
+
+        public FeistelData Decrypt(FeistelData feistelData)
+        {
+            feistelData.Round = feistelData.K.Count;
+            return DecryptPerRound(feistelData);
         }
 
         public FeistelData DecryptPerRound(FeistelData feistelData)

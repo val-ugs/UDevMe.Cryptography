@@ -9,7 +9,9 @@ namespace Cryptography.Domain.Abstractions
 {
     public interface IFeistelService
     {
+        FeistelData Encrypt(FeistelData feistelData);
         FeistelData EncryptPerRound(FeistelData feistelData);
+        FeistelData Decrypt(FeistelData feistelData);
         FeistelData DecryptPerRound(FeistelData feistelData);
     }
 }
