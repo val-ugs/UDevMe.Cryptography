@@ -29,6 +29,7 @@ namespace Cryptography.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IA5Service, A5Service>();
+            services.AddTransient<IAesService, AesService>();
             services.AddTransient<ICaesarCipherService, CaesarCipherService>();
             services.AddTransient<IDiffieHellmanService, DiffieHellmanService>();
             services.AddTransient<IElGamalService, ElGamalService>();
