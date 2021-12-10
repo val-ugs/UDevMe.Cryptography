@@ -50,6 +50,7 @@ namespace Cryptography.BusinessLogic.Services
         private uint[] _g = new uint[] { 0x0b, 0x0d, 0x09, 0x0e}; // invC
         private uint[] _rcon = new uint[]{0x00, 0x01, 0x02, 0x04, 0x08, 0x10,
                                             0x20, 0x40, 0x80, 0x1b, 0x36};
+
         public uint[][] Encrypt(AesData aesData)
         {
             return AesAlgorithm(aesData, mode:0, isEncrypt:true);
@@ -78,6 +79,7 @@ namespace Cryptography.BusinessLogic.Services
         //mode: 0 - Full Algorithm, 1 - SubBytes, 2 - ShiftRows, 3 - MixColumns
         private uint[][] AesAlgorithm(AesData aesData, int mode, bool isEncrypt)
         {
+
             if (aesData.Values.Length != aesData.Key.Length && aesData.Values[0].Length == aesData.Key[0].Length)
             {
                 uint[][] arr = new uint[aesData.Values.Length][];

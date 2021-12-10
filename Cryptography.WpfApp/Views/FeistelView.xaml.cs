@@ -89,8 +89,8 @@ namespace Cryptography.WpfApp.Views
             {
                 var result = response.Content.ReadAsAsync<FeistelData>().Result;
 
-                outputL1.Text = BaseConverter.UintToString(result.L, 16).ToString();
-                outputR1.Text = BaseConverter.UintToString(result.R, 16).ToString();
+                outputL1.Text = BaseConverter.UintToString(result.L, 16);
+                outputR1.Text = BaseConverter.UintToString(result.R, 16);
             }
         }
 
@@ -113,8 +113,8 @@ namespace Cryptography.WpfApp.Views
             {
                 var result = response.Content.ReadAsAsync<FeistelData>().Result;
 
-                outputRoundL1.Text = BaseConverter.UintToString(result.L, 16).ToString();
-                outputRoundR1.Text = BaseConverter.UintToString(result.R, 16).ToString();
+                outputRoundL1.Text = BaseConverter.UintToString(result.L, 16);
+                outputRoundR1.Text = BaseConverter.UintToString(result.R, 16);
             }
         }
 
@@ -135,8 +135,8 @@ namespace Cryptography.WpfApp.Views
             {
                 var result = response.Content.ReadAsAsync<FeistelData>().Result;
 
-                outputL2.Text = BaseConverter.UintToString(result.L, 16).ToString();
-                outputR2.Text = BaseConverter.UintToString(result.R, 16).ToString();
+                outputL2.Text = BaseConverter.UintToString(result.L, 16);
+                outputR2.Text = BaseConverter.UintToString(result.R, 16);
             }
         }
 
@@ -159,8 +159,8 @@ namespace Cryptography.WpfApp.Views
             {
                 var result = response.Content.ReadAsAsync<FeistelData>().Result;
 
-                outputRoundL2.Text = BaseConverter.UintToString(result.L, 16).ToString();
-                outputRoundR2.Text = BaseConverter.UintToString(result.R, 16).ToString();
+                outputRoundL2.Text = BaseConverter.UintToString(result.L, 16);
+                outputRoundR2.Text = BaseConverter.UintToString(result.R, 16);
             }
         }
 
