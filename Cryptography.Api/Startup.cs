@@ -38,6 +38,7 @@ namespace Cryptography.Api
             services.AddTransient<IGaloisLfsrService, GaloisLfsrService>();
             services.AddTransient<IGronsfeldCipherService, GronsfeldCipherService>();
             services.AddTransient<IMd5Service, Md5Service>();
+            services.AddTransient<IMixColumnsService, MixColumnsService>();
             services.AddTransient<IPermutationService, PermutationService>();
             services.AddTransient<IRsaService, RsaService>();
             services.AddTransient<IVigenereCipherService, VigenereCipherService>();
