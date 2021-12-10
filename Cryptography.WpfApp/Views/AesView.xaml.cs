@@ -47,7 +47,7 @@ namespace Cryptography.WpfApp.Views
 
         private void btnGetSubBytesPerRound_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(round1.Text))
+            if (String.IsNullOrEmpty(round1.Text) && _blockView1 == null && _keyView1 == null)
             {
                 return;
             }
@@ -104,7 +104,7 @@ namespace Cryptography.WpfApp.Views
 
         private void btnGetShiftRowsPerRound_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(round1.Text))
+            if (String.IsNullOrEmpty(round1.Text) && _blockView1 == null && _keyView1 == null)
             {
                 return;
             }
@@ -161,7 +161,7 @@ namespace Cryptography.WpfApp.Views
 
         private void btnGetMixColumnsPerRound_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(round1.Text))
+            if (String.IsNullOrEmpty(round1.Text) && _blockView1 == null && _keyView1 == null)
             {
                 return;
             }
@@ -218,7 +218,7 @@ namespace Cryptography.WpfApp.Views
 
         private void btnEncrypt_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(round1.Text))
+            if (String.IsNullOrEmpty(round1.Text) && _blockView1 == null && _keyView1 == null)
             {
                 return;
             }
