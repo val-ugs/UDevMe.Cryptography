@@ -46,6 +46,7 @@ namespace Cryptography.WpfApp.ViewModels
                 new Algorithm(){ Name = "Fibonacci Lfsr", UserControlSample = new FibonacciLfsrView() },
                 new Algorithm(){ Name = "Galois Lfsr", UserControlSample = new GaloisLfsrView() },
                 new Algorithm(){ Name = "Gronsfeld Cipher", UserControlSample = new GronsfeldCipherView() },
+                new Algorithm(){ Name = "Hash", UserControlSample = new HashView() },
                 new Algorithm(){ Name = "MD5", UserControlSample = new Md5View() },
                 new Algorithm(){ Name = "MixColumns", UserControlSample = new MixColumnsView() },
                 new Algorithm(){ Name = "Permutation", UserControlSample = new PermutationView() },
