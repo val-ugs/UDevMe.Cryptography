@@ -36,6 +36,7 @@ namespace Cryptography.Api
             services.AddTransient<IFeistelService, FeistelService>();
             services.AddTransient<IFibonacciLfsrService, FibonacciLfsrService>();
             services.AddTransient<IGaloisLfsrService, GaloisLfsrService>();
+            services.AddTransient<IHashService, HashService>();
             services.AddTransient<IGronsfeldCipherService, GronsfeldCipherService>();
             services.AddTransient<IMd5Service, Md5Service>();
             services.AddTransient<IMixColumnsService, MixColumnsService>();
