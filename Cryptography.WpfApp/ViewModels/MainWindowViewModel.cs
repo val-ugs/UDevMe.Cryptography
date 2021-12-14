@@ -52,6 +52,7 @@ namespace Cryptography.WpfApp.ViewModels
                 new Algorithm(){ Name = "MixColumns", UserControlSample = new MixColumnsView() },
                 new Algorithm(){ Name = "Permutation", UserControlSample = new PermutationView() },
                 new Algorithm(){ Name = "RSA", UserControlSample = new RsaView() },
+                new Algorithm(){ Name = "Triple Des (3DES)", UserControlSample = new TripleDesView() },
                 new Algorithm(){ Name = "Trisemus Cipher", UserControlSample = new TrisemusCipherView() },
                 new Algorithm(){ Name = "Vigenere Cipher", UserControlSample = new VigenereCipherView() }
             };
