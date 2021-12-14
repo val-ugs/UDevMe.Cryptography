@@ -26,6 +26,7 @@
 
         <ScrollViewer Grid.Row="2"  VerticalScrollBarVisibility="Auto">
             <StackPanel>
+                <TextBlock Foreground="Red" Margin="5">Attention: Write all words in one word</TextBlock>
                 <WrapPanel>
                     <Label>Select Language</Label>
                     <ComboBox x:Name="language1">
@@ -59,6 +60,7 @@
 
         <ScrollViewer Grid.Row="6"  VerticalScrollBarVisibility="Auto">
             <StackPanel>
+                <TextBlock Foreground="Red" Margin="5">Attention: Write all words in one word</TextBlock>
                 <WrapPanel>
                     <Label>Select Language</Label>
                     <ComboBox x:Name="language2">
