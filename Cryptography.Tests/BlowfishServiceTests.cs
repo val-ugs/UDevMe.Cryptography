@@ -28,7 +28,7 @@ namespace Cryptography.Tests
             uint r = 4;
             // K1 = 0110, K2 = 1001, K3 = 1000, K4 = 0001, K5 = 0111 
             List<uint> k = new List<uint> { 6, 9, 8, 1, 7};
-            BlowfishData expectedFeistelData = new BlowfishData
+            BlowfishData expectedBlowfishData = new BlowfishData
             {
                 // L = 0100
                 L = 4,
@@ -47,8 +47,8 @@ namespace Cryptography.Tests
             var result = _service.Encrypt(feistelData);
 
             // assert
-            Assert.AreEqual(expectedFeistelData.L, result.L);
-            Assert.AreEqual(expectedFeistelData.R, result.R);
+            Assert.AreEqual(expectedBlowfishData.L, result.L);
+            Assert.AreEqual(expectedBlowfishData.R, result.R);
         }
 
         [Test]
@@ -60,7 +60,7 @@ namespace Cryptography.Tests
             uint r = 10;
             // K1 = 0110, K2 = 1001, K3 = 1000, K4 = 0001, K5 = 0111 
             List<uint> k = new List<uint> { 6, 9, 8, 1, 7 };
-            BlowfishData expectedFeistelData = new BlowfishData
+            BlowfishData expectedBlowfishData = new BlowfishData
             {
                 // L0 = 1010
                 L = 10,
@@ -79,8 +79,8 @@ namespace Cryptography.Tests
             var result = _service.Decrypt(feistelData);
 
             // assert
-            Assert.AreEqual(expectedFeistelData.L, result.L);
-            Assert.AreEqual(expectedFeistelData.R, result.R);
+            Assert.AreEqual(expectedBlowfishData.L, result.L);
+            Assert.AreEqual(expectedBlowfishData.R, result.R);
         }
     }
 }
