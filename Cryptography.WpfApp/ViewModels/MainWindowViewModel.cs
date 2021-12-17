@@ -41,6 +41,7 @@ namespace Cryptography.WpfApp.ViewModels
                 new Algorithm(){ Name = "Aes", UserControlSample = new AesView() },
                 new Algorithm(){ Name = "Blowfish", UserControlSample = new BlowfishView() },
                 new Algorithm(){ Name = "Caesar Cipher", UserControlSample = new CaesarCipherView() },
+                new Algorithm(){ Name = "DES", UserControlSample = new DesView() },
                 new Algorithm(){ Name = "El Gamal", UserControlSample = new ElGamalView() },
                 new Algorithm(){ Name = "Diffie Hellman", UserControlSample = new DiffieHellmanView() },
                 new Algorithm(){ Name = "Feistel", UserControlSample = new FeistelView() },

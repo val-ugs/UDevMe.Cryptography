@@ -37,6 +37,20 @@ namespace Cryptography.WpfApp.Utils
 
             return outputString.ToString();
         }
+
+        public static List<uint> ConvertStringToUIntList(string text, char delimiter)
+        {
+            List<uint> numbers = new List<uint>();
+            uint value;
+            var textMembers = text.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var textMember in textMembers)
+            {
+                numbers.Add(uint.TryParse(textMember, out value) ? value : 0);
+            }
+
+            return numbers;
+        }
     }
 }
 

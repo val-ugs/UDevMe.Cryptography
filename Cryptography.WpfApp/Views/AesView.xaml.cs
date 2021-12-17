@@ -287,7 +287,7 @@ namespace Cryptography.WpfApp.Views
                 table.Columns.Add(new DataColumn(c.ToString()));
             }
 
-            for (var r = 0; r < array.Length; r++)
+            for (var r = 0; r < array[0].Length; r++)
             {
                 table.Rows.Add(table.NewRow());
             }
