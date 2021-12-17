@@ -32,6 +32,7 @@ namespace Cryptography.Api
             services.AddTransient<IAesService, AesService>();
             services.AddTransient<IBlowfishService, BlowfishService>();
             services.AddTransient<ICaesarCipherService, CaesarCipherService>();
+            services.AddTransient<IDesService, DesService>();
             services.AddTransient<IDiffieHellmanService, DiffieHellmanService>();
             services.AddTransient<IElGamalService, ElGamalService>();
             services.AddTransient<IFeistelService, FeistelService>();

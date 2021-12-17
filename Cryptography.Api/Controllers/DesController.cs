@@ -10,19 +10,19 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HashController : ControllerBase
+    public class DesController : ControllerBase
     {
-        private readonly IHashService _hashService;
+        private readonly IDesService _desService;
 
-        public HashController(IHashService hashService)
+        public DesController(IDesService desService)
         {
-            _hashService = hashService;
+            _desService = desService;
         }
 
         [HttpPost("[action]")]
-        public ActionResult<int> Calculate(HashData hashData)
+        public ActionResult<uint[]> Encrypt(DesData desData)
         {
-            var result = _hashService.Calculate(hashData);
+            var result = _desService.Encrypt(desData);
 
             return result;
         }

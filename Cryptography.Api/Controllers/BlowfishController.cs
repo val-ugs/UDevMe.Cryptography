@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlowfishController
+    public class BlowfishController : ControllerBase
     {
         private readonly IBlowfishService _blowfishService;
 

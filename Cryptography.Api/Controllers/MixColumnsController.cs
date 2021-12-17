@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MixColumnsController
+    public class MixColumnsController : ControllerBase
     {
         private readonly IMixColumnsService _mixColumnsService;
 

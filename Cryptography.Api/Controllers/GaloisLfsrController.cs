@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GaloisLfsrController
+    public class GaloisLfsrController : ControllerBase
     {
         private readonly IGaloisLfsrService _galoisLfsrService;
 

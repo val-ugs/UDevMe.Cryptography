@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TrisemusCipherController
+    public class TrisemusCipherController : ControllerBase
     {
         private readonly ITrisemusCipherService _trisemusCipherService;
 

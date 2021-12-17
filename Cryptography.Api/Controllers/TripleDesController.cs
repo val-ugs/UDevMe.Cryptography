@@ -10,7 +10,7 @@ namespace Cryptography.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TripleDesController
+    public class TripleDesController : ControllerBase
     {
         private readonly ITripleDesService _tripleDesService;
 
