@@ -12,22 +12,36 @@ namespace Cryptography.BusinessLogic.Services
     {
         public int GetKeyX(DiffieHellmanData diffieHellmanData)
         {
-            return (int)Math.Pow(GetB(diffieHellmanData), diffieHellmanData.X) % diffieHellmanData.N;
+            int b = GetB(diffieHellmanData);
+            decimal temp = b;
+            for (int i = 0; i < diffieHellmanData.X - 1; i++)
+                temp *= b;
+            return (int)(temp % diffieHellmanData.N);
         }
 
         public int GetKeyY(DiffieHellmanData diffieHellmanData)
         {
-            return (int)Math.Pow(GetA(diffieHellmanData), diffieHellmanData.Y) % diffieHellmanData.N;
+            int a = GetA(diffieHellmanData);
+            decimal temp = a;
+            for (int i = 0; i < diffieHellmanData.Y - 1; i++)
+                temp *= a;
+            return (int)(temp % diffieHellmanData.N);
         }
 
         public int GetA(DiffieHellmanData diffieHellmanData)
         {
-            return (int)Math.Pow(diffieHellmanData.Q, diffieHellmanData.X) % diffieHellmanData.N;
+            decimal temp = diffieHellmanData.Q;
+            for (int i = 0; i < diffieHellmanData.X - 1; i++)
+                temp *= diffieHellmanData.Q;
+            return (int)(temp % diffieHellmanData.N);
         }
 
         public int GetB(DiffieHellmanData diffieHellmanData)
         {
-            return (int)Math.Pow(diffieHellmanData.Q, diffieHellmanData.Y) % diffieHellmanData.N;
+            decimal temp = diffieHellmanData.Q;
+            for (int i = 0; i < diffieHellmanData.Y - 1; i++)
+                temp *= diffieHellmanData.Q;
+            return (int)(temp % diffieHellmanData.N);
         }
     }
 }
