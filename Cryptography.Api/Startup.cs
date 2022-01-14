@@ -44,6 +44,7 @@ namespace Cryptography.Api
             services.AddTransient<IMixColumnsService, MixColumnsService>();
             services.AddTransient<IPermutationService, PermutationService>();
             services.AddTransient<IRsaService, RsaService>();
+            services.AddTransient<ISBlockGenerationService, SBlockGenerationService>();
             services.AddTransient<ITripleDesService, TripleDesService>();
             services.AddTransient<ITrisemusCipherService, TrisemusCipherService>();
             services.AddTransient<IVigenereCipherService, VigenereCipherService>();

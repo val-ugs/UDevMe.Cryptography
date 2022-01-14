@@ -14,9 +14,9 @@ namespace Cryptography.Api.Controllers
     {
         private readonly IA5Service _a5Service;
 
-        public A5Controller(IA5Service rsaService)
+        public A5Controller(IA5Service a5Service)
         {
-            _a5Service = rsaService;
+            _a5Service = a5Service;
         }
 
         [HttpPost("[action]")]
