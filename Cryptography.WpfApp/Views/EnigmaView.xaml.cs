@@ -307,7 +307,7 @@ namespace Cryptography.WpfApp.Views
                     }
                     foreach (string letter in alphabet)
                     {
-                        if ((string)dataView[i][j] == letter)
+                        if (((string)dataView[i][j]).ToUpper() == letter)
                         {
                             alphabet.Remove(letter);
                             break;

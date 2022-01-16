@@ -27,7 +27,11 @@ namespace Cryptography.BusinessLogic.Services
         public string Decrypt(EnigmaData enigmaData)
         {
             string inputText = enigmaData.InputText.ToUpper();
-            
+            string patchPanel = enigmaData.PatchPanel.ToUpper();
+            string rotor1 = enigmaData.Rotor1.ToUpper();
+            string rotor2 = enigmaData.Rotor2.ToUpper();
+            string rotor3 = enigmaData.Rotor3.ToUpper();
+            string reflector = enigmaData.Reflector.ToUpper();
 
             string decodedText = "";
             int shift = 1;
@@ -37,24 +41,24 @@ namespace Cryptography.BusinessLogic.Services
                 char letter = inputText[i];
                 
                 // Direct passage
-                letter = GetLetterFromPatchPanel(letter, enigmaData.PatchPanel, Passage.Direct);
+                letter = GetLetterFromPatchPanel(letter, patchPanel, Passage.Direct);
                 letter = Rotate(letter, Direction.Right, shift);
-                letter = GetLetterFromRotor(letter, enigmaData.Rotor1, Passage.Direct);
+                letter = GetLetterFromRotor(letter, rotor1, Passage.Direct);
                 letter = Rotate(letter, Direction.Left, shift);
-                letter = GetLetterFromRotor(letter, enigmaData.Rotor2, Passage.Direct);
+                letter = GetLetterFromRotor(letter, rotor2, Passage.Direct);
                 // No rotate
-                letter = GetLetterFromRotor(letter, enigmaData.Rotor3, Passage.Direct);
+                letter = GetLetterFromRotor(letter, rotor3, Passage.Direct);
 
-                letter = GetLetterFromReflector(letter, enigmaData.Reflector);
+                letter = GetLetterFromReflector(letter, reflector);
 
                 // Back passage
-                letter = GetLetterFromRotor(letter, enigmaData.Rotor3, Passage.Back);
+                letter = GetLetterFromRotor(letter, rotor3, Passage.Back);
                 // No rotate
-                letter = GetLetterFromRotor(letter, enigmaData.Rotor2, Passage.Back);
+                letter = GetLetterFromRotor(letter, rotor2, Passage.Back);
                 letter = Rotate(letter, Direction.Right, shift);
-                letter = GetLetterFromRotor(letter, enigmaData.Rotor1, Passage.Back);
+                letter = GetLetterFromRotor(letter, rotor1, Passage.Back);
                 letter = Rotate(letter, Direction.Left, shift);
-                letter = GetLetterFromPatchPanel(letter, enigmaData.PatchPanel, Passage.Back);
+                letter = GetLetterFromPatchPanel(letter, patchPanel, Passage.Back);
 
                 decodedText += letter;
                 shift++;
