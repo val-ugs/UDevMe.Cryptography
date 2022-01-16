@@ -22,7 +22,7 @@ namespace Cryptography.BusinessLogic.Services
 
     public class EnigmaService : IEnigmaService
     {
-        private string _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string _alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         public string Decrypt(EnigmaData enigmaData)
         {
