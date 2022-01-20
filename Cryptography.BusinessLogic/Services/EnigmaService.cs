@@ -104,10 +104,10 @@ namespace Cryptography.BusinessLogic.Services
             switch (direction)
             {
                 case Direction.Left:
-                    outputLetter = _alphabet[letterIndex - shift];
+                    outputLetter = _alphabet[((letterIndex - shift) + _alphabet.Length) % _alphabet.Length];
                     break;
                 case Direction.Right:
-                    outputLetter = _alphabet[letterIndex + shift];
+                    outputLetter = _alphabet[((letterIndex + shift) + _alphabet.Length) % _alphabet.Length];
                     break;
             }
             return outputLetter;

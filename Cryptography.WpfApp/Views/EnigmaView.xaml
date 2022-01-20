@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Decrypt</TextBlock>
         </Grid>
 
         <GridSplitter Grid.Row="1" ShowsPreview="False" Height="1"

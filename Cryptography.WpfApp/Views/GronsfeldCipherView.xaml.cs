@@ -53,7 +53,7 @@ namespace Cryptography.WpfApp.Views
             {
                 Language = language2.Text,
                 Text = inputText2.Text,
-                Key = DataConverter.ConvertStringToIntList(inputKey1.Text, _delimiter)
+                Key = DataConverter.ConvertStringToIntList(inputKey2.Text, _delimiter)
             };
 
             var response = HttpClientSample.Client.PostAsJsonAsync("GronsfeldCipher/Decrypt", gronsfeldCipher).Result;
