@@ -3,6 +3,7 @@ using Cryptography.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,7 +31,7 @@ namespace Cryptography.BusinessLogic.Services
 
         public int GetA(DiffieHellmanData diffieHellmanData)
         {
-            decimal temp = diffieHellmanData.Q;
+            BigInteger temp = diffieHellmanData.Q;
             for (int i = 0; i < diffieHellmanData.X - 1; i++)
                 temp *= diffieHellmanData.Q;
             return (int)(temp % diffieHellmanData.N);
@@ -38,7 +39,7 @@ namespace Cryptography.BusinessLogic.Services
 
         public int GetB(DiffieHellmanData diffieHellmanData)
         {
-            decimal temp = diffieHellmanData.Q;
+            BigInteger temp = diffieHellmanData.Q;
             for (int i = 0; i < diffieHellmanData.Y - 1; i++)
                 temp *= diffieHellmanData.Q;
             return (int)(temp % diffieHellmanData.N);

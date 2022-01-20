@@ -3,6 +3,7 @@ using Cryptography.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -61,7 +62,10 @@ namespace Cryptography.BusinessLogic.Services
             if (!CheckCoPrime(rsaData.Exponent, n))
                 throw new Exception("e and n is not co-prime");
 
-            y = (int)(Math.Pow(rsaData.Value, rsaData.Exponent) % m);
+            BigInteger temp = rsaData.Value;
+            for (int i = 0; i < rsaData.Exponent - 1; i++)
+                temp *= rsaData.Value;
+            y = (int)(temp % m);
 
             return y;
         }
@@ -75,7 +79,10 @@ namespace Cryptography.BusinessLogic.Services
             m = rsaData.P * rsaData.Q;
             n = (rsaData.P - 1) * (rsaData.Q - 1);
 
-            x = (int)(Math.Pow(rsaData.Value, rsaData.Exponent) % m);
+            BigInteger temp = rsaData.Value;
+            for (int i = 0; i < rsaData.Exponent - 1; i++)
+                temp *= rsaData.Value;
+            x = (int)(temp % m);
 
             return x;
         }

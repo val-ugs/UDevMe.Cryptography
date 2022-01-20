@@ -46,8 +46,8 @@ namespace Cryptography.Tests
             // arrange
             int p = 13;
             int q = 7;
-            int e = 5;
-            int x = 45;
+            int d = 5;
+            int y = 45;
 
             int expectedResult = 54;
 
@@ -55,8 +55,8 @@ namespace Cryptography.Tests
             {
                 P = p,
                 Q = q,
-                Exponent = e,
-                Value = x
+                Exponent = d,
+                Value = y
             };
 
             // act
