@@ -29,9 +29,9 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0">
+                <Image Grid.Row="0" Margin="1">
                     <Image.Source>
-                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/UDevMeLogo.png"/>
+                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/UDeVMeLogo.png"/>
                     </Image.Source>
                 </Image>
 

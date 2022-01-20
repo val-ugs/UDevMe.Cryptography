@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\UDevMeLogo.png" />
+    <None Remove="Images\UDeVMeLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,7 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\UDevMeLogo.png" />
+    <Resource Include="Images\UDeVMeLogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
