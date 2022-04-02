@@ -1,3 +1,5 @@
+using Cryptography.BusinessLogic.Services;
+using Cryptography.Domain.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,27 @@ namespace Cryptography.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IA5Service, A5Service>();
+            services.AddTransient<IAesService, AesService>();
+            services.AddTransient<IBlowfishService, BlowfishService>();
+            services.AddTransient<ICaesarCipherService, CaesarCipherService>();
+            services.AddTransient<IDesService, DesService>();
+            services.AddTransient<IDiffieHellmanService, DiffieHellmanService>();
+            services.AddTransient<IElGamalService, ElGamalService>();
+            services.AddTransient<IEnigmaService, EnigmaService>();
+            services.AddTransient<IFeistelService, FeistelService>();
+            services.AddTransient<IFibonacciLfsrService, FibonacciLfsrService>();
+            services.AddTransient<IGaloisLfsrService, GaloisLfsrService>();
+            services.AddTransient<IHashService, HashService>();
+            services.AddTransient<IGronsfeldCipherService, GronsfeldCipherService>();
+            services.AddTransient<IMd5Service, Md5Service>();
+            services.AddTransient<IMixColumnsService, MixColumnsService>();
+            services.AddTransient<IPermutationService, PermutationService>();
+            services.AddTransient<IRsaService, RsaService>();
+            services.AddTransient<ISBlockGenerationService, SBlockGenerationService>();
+            services.AddTransient<ITripleDesService, TripleDesService>();
+            services.AddTransient<ITrisemusCipherService, TrisemusCipherService>();
+            services.AddTransient<IVigenereCipherService, VigenereCipherService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

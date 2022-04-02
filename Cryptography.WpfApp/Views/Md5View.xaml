@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="Cryptography.WpfApp.Views.Md5View"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cryptography.WpfApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock  HorizontalAlignment="Center" FontWeight="Bold">Encrypt</TextBlock>
+        </Grid>
+
+        <GridSplitter Grid.Row="1" ShowsPreview="False" Height="1"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel >
+                <TextBlock Foreground="Red" Margin="5">Attention: All numbers should be entered in decimal notation</TextBlock>
+                <WrapPanel>
+                    <Label>A:</Label>
+                    <TextBox x:Name="a1" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>B:</Label>
+                    <TextBox x:Name="b1" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>C:</Label>
+                    <TextBox x:Name="c1" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>D:</Label>
+                    <TextBox x:Name="d1" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>M:</Label>
+                    <TextBox x:Name="m1" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>K:</Label>
+                    <TextBox x:Name="k1" Width="40" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label>Round:</Label>
+                    <TextBox x:Name="round1" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Button Click="btnEncryptPerRound_Click" Width="200" HorizontalAlignment="Left" Margin="5">EncryptPerRound</Button>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label>A per round:</Label>
+                    <TextBox x:Name="outputRoundA1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>B per round:</Label>
+                    <TextBox x:Name="outputRoundB1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>C per round:</Label>
+                    <TextBox x:Name="outputRoundC1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>D per rounds:</Label>
+                    <TextBox x:Name="outputRoundD1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <Button Click="btnEncrypt_Click" Width="200" HorizontalAlignment="Left" Margin="5">Encrypt</Button>
+                <WrapPanel>
+                    <Label>Output A:</Label>
+                    <TextBox x:Name="outputA1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>Output B:</Label>
+                    <TextBox x:Name="outputB1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>Output C:</Label>
+                    <TextBox x:Name="outputC1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>Output D:</Label>
+                    <TextBox x:Name="outputD1" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+
+        <GridSplitter Grid.Row="3" ShowsPreview="False" Height="3"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <Grid Grid.Row="4">
+            <TextBlock  HorizontalAlignment="Center" FontWeight="Bold">Decrypt</TextBlock>
+        </Grid>
+
+        <GridSplitter Grid.Row="5" ShowsPreview="False" Height="1"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <ScrollViewer Grid.Row="6" VerticalScrollBarVisibility="Auto">
+            <StackPanel >
+                <TextBlock Foreground="Red" Margin="5">Attention: All numbers should be entered in decimal notation</TextBlock>
+                <WrapPanel>
+                    <Label>A:</Label>
+                    <TextBox x:Name="a2" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>B:</Label>
+                    <TextBox x:Name="b2" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>C:</Label>
+                    <TextBox x:Name="c2" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>D:</Label>
+                    <TextBox x:Name="d2" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>M:</Label>
+                    <TextBox x:Name="m2" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>K:</Label>
+                    <TextBox x:Name="k2" Width="40" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label>Round:</Label>
+                    <TextBox x:Name="round2" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Button Click="btnDecryptPerRound_Click" Width="200" HorizontalAlignment="Left" Margin="5">DecryptPerRound</Button>
+                </WrapPanel>
+                <WrapPanel>
+                    <Label>A per round:</Label>
+                    <TextBox x:Name="outputRoundA2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>B per round:</Label>
+                    <TextBox x:Name="outputRoundB2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>C per round:</Label>
+                    <TextBox x:Name="outputRoundC2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>D per rounds:</Label>
+                    <TextBox x:Name="outputRoundD2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+                <Button Click="btnDecrypt_Click" Width="200" HorizontalAlignment="Left" Margin="5">Decrypt</Button>
+                <WrapPanel>
+                    <Label>Output A:</Label>
+                    <TextBox x:Name="outputA2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>Output B:</Label>
+                    <TextBox x:Name="outputB2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>Output C:</Label>
+                    <TextBox x:Name="outputC2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                    <Label>Output D:</Label>
+                    <TextBox x:Name="outputD2" IsReadOnly="True" Width="40" VerticalAlignment="Center"></TextBox>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

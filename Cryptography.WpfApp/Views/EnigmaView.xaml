@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Cryptography.WpfApp.Views.EnigmaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cryptography.WpfApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="510" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TextBlock HorizontalAlignment="Center" FontWeight="Bold">Decrypt</TextBlock>
+        </Grid>
+
+        <GridSplitter Grid.Row="1" ShowsPreview="False" Height="1"
+                VerticalAlignment="Center" HorizontalAlignment="Stretch" IsEnabled="False"/>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <WrapPanel>
+                    <TextBlock Margin="5">Input text:</TextBlock>
+                    <TextBox x:Name="inputText" Width="300" HorizontalAlignment="Left" Margin="5"></TextBox>
+                </WrapPanel>
+
+                <WrapPanel>
+                    <TextBlock Margin="5px">Choose Rotor 1:</TextBlock>
+                    <ComboBox Width="40" x:Name="indexOfRotor1" SelectionChanged="CmbRotor1_SelectionChanged"></ComboBox>
+                    <TextBlock Margin="5px">Choose Rotor 2:</TextBlock>
+                    <ComboBox Width="40" x:Name="indexOfRotor2" SelectionChanged="CmbRotor2_SelectionChanged"></ComboBox>
+                    <TextBlock Margin="5px">Choose Rotor 3:</TextBlock>
+                    <ComboBox Width="40" x:Name="indexOfRotor3" SelectionChanged="CmbRotor3_SelectionChanged"></ComboBox>
+                    <TextBlock Margin="5px">Choose Reflector:</TextBlock>
+                    <ComboBox Width="80" x:Name="letterOfReflector" SelectionChanged="CmbReflector_SelectionChanged"></ComboBox>
+                </WrapPanel>
+
+                <WrapPanel>
+                    <TextBlock Width="80">Alphabet:</TextBlock>
+                    <DataGrid x:Name="alphabetGrid" ColumnWidth="20" CanUserAddRows="False" HeadersVisibility="None" IsReadOnly="True"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Width="80">Patch panel:</TextBlock>
+                    <DataGrid x:Name="panelPatchGrid" ColumnWidth="20" CanUserAddRows="False" HeadersVisibility="None"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Width="80">Rotor 1:</TextBlock>
+                    <DataGrid x:Name="rotor1Grid" ColumnWidth="20" CanUserAddRows="False" HeadersVisibility="None"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Width="80">Rotor 2:</TextBlock>
+                    <DataGrid x:Name="rotor2Grid" ColumnWidth="20" CanUserAddRows="False" HeadersVisibility="None"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Width="80">Rotor 3:</TextBlock>
+                    <DataGrid x:Name="rotor3Grid" ColumnWidth="20" CanUserAddRows="False" HeadersVisibility="None"/>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Width="80">Reflector:</TextBlock>
+                    <DataGrid x:Name="reflectorGrid" ColumnWidth="20" CanUserAddRows="False" HeadersVisibility="None"/>
+                </WrapPanel>
+                <Button Click="btnDecrypt_Click" Width="200" HorizontalAlignment="Left" Margin="5">Decrypt</Button>
+                <WrapPanel>
+                    <TextBlock Margin="5">Output text:</TextBlock>
+                    <TextBox x:Name="outputText" Width="300" HorizontalAlignment="Left" Margin="5"></TextBox>
+                </WrapPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
